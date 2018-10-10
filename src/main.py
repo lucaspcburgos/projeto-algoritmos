@@ -12,4 +12,5 @@ class Ngrama():
     def create_sequency(self, i, arr):
         ng = arr[i:i+2]
         return ng
-            
+
+class Documento()
