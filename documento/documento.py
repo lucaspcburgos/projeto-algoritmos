@@ -10,9 +10,13 @@ class Documento():
     e armazena em um array (self.wordsArray) a cada palavra do documento aberto
     """
     def __init__(self,file,n):
+        self.file = file
         self.wordsArray = np.array(open(file, 'r').read().split())
         self.n = n
         self.lista = ListaEncadeada()
+
+    def returnArray():
+        return self.wordsArray
 
     #@profile
     def gerarNgramas(self):
@@ -61,3 +65,12 @@ class Documento():
 
         medida = cont/total
         return medida
+
+    def __repr__(self):
+        return '{0}({1},{2})'.format(self.__class__.__name__, repr(self.file), self.n)
+
+if __name__ == "__main__":
+    d = Documento("teste.txt", 3)
+    n = Ngrama(0, 3, d)
+    repr(d)
+    repr(n)
