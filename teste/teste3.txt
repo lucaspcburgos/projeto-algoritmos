@@ -1,1 +1,0 @@
-esse é um teste para ver se funciona, o trabalho de n-grama do projeto, de algoritmos a realizar
