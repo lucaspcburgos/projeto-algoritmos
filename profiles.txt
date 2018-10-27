@@ -1,0 +1,37 @@
+7825570056 function calls in 4978.846 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1846    0.003    0.000    0.009    0.000 _bootlocale.py:23(getpreferredencoding)
+781800773  172.308    0.000 1408.763    0.000 _methods.py:45(_all)
+     1846    0.001    0.000    0.001    0.000 codecs.py:259(__init__)
+     1846    0.003    0.000    0.004    0.000 codecs.py:308(__init__)
+     1846    0.005    0.000    0.018    0.000 codecs.py:318(decode)
+        1    0.003    0.003    0.243    0.243 corpus.py:14(__init__)
+        1    0.263    0.263 4978.603 4978.603 corpus.py:25(verificarPlagio)
+      923    1.304    0.001    2.871    0.003 documento.py:14(gerarNgramas)
+      923  503.708    0.546 4975.427    5.390 documento.py:26(contencao)
+      923    0.038    0.000    0.238    0.000 documento.py:8(__init__)
+  1886196    1.403    0.000    1.403    0.000 lista_encadeada.py:10(__init__)
+     1846    0.003    0.000    0.005    0.000 lista_encadeada.py:24(__init__)
+  1882504    0.410    0.000    0.410    0.000 lista_encadeada.py:39(isEmpty)
+  1882504    3.007    0.000    4.818    0.000 lista_encadeada.py:43(insertLast)
+      923    0.111    0.000    0.111    0.000 lista_encadeada.py:85(size)
+  1882504    0.404    0.000    0.404    0.000 n_grama.py:2(__init__)
+781800773 1704.565    0.000 4467.574    0.000 numeric.py:2389(array_equal)
+2345402319  476.439    0.000 1050.236    0.000 numeric.py:433(asarray)
+     1846    0.013    0.000    0.013    0.000 {built-in method _codecs.utf_8_decode}
+     1846    0.005    0.000    0.005    0.000 {built-in method _locale.nl_langinfo}
+     1846    0.002    0.000    0.002    0.000 {built-in method builtins.len}
+      924    0.042    0.000    0.042    0.000 {built-in method builtins.print}
+     1846    0.076    0.000    0.089    0.000 {built-in method io.open}
+2345404165  574.085    0.000  574.085    0.000 {built-in method numpy.core.multiarray.array}
+        1    0.001    0.001    0.001    0.001 {built-in method posix.listdir}
+781800773  304.011    0.000 1712.774    0.000 {method 'all' of 'numpy.ndarray' objects}
+      923    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+      923    0.001    0.000    0.001    0.000 {method 'endswith' of 'str' objects}
+     1846    0.023    0.000    0.041    0.000 {method 'read' of '_io.TextIOWrapper' objects}
+781800773 1236.455    0.000 1236.455    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     1846    0.153    0.000    0.153    0.000 {method 'split' of 'str' objects}
