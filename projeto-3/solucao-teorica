@@ -1,0 +1,43 @@
+Aluno:
+E-mail:
+Centro de Informática - CIn (UFPE)
+Algoritmos e estruturas de dados
+Professor:
+
+- Solução teórica
+
+1) Caracterizar a estrutura de uma solução ótima:
+
+    'n' é a quantidade total de objetos
+    Dado um objeto 'X' com peso 'Xp' e valor 'Xv'
+    Dada uma locomotiva com capacidade máxima de peso 'P'
+
+    -Primeiro analizamos se uma carga faz parte ou não da solução ótima.
+        Caso ele faça parte da solução ótima, a comopsição ótima para a locomotiva seria o peso da locomotiva menos o peso da carga.
+        Ou seja, é como se estivéssemos compondo uma outra locomotiva com peso ('P' - 'Xp') porém já com valor 'Xv' adicionado.
+
+    -Depois analizamos se aquela carga NÃO faz parte da solução ótima.
+        Nesse caso assumimos que a locomotiva é composta pelos outros elementos, exceto o que estamos analizando.
+        ou seja, a locomotiva é composta por n-1 elementos.
+
+    -Depois calculamos o máximo desses dois valores e o mesmo será escolhido
+
+
+
+2) Solução recursiva:
+    Para cada carga analisada, devemos saber se a a carga anterior está na locomotiva ou não, criando assim uma recursividade
+    até que cheguemos ao caso base, que seria a locomotiva ter capacidade 0 ou termos 0 elementos.
+
+    Exemplo:
+        - uma função recursiva f(n, P)
+
+            - Se o objeto X está na solução ótima, analisamos os n-1 restantes e descontamos seu peso da capacidade máxima
+              da locomotiva P-Xp guardando o seu valor Xv.
+              Ou seja, executamos f(n-1, P-Xp) + Xv
+
+            - Se o objeto X NÃO está na solução ótima, executamos a função para os elementos restantes, mantendo o peso da locomotiva
+             f(n-1, P)
+
+
+
+
