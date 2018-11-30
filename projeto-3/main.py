@@ -1,10 +1,33 @@
+import sys
 from maximaze import Maximaze
 
-w = 500
-weights = [30, 45, 2345, 457, 45, 235, 47, 346, 346, 2456, 45, 3456]
-values = [425, 1241, 7635, 986, 125, 856, 413, 4356, 673, 1234, 2345, 234]
-pro = len(weights)
+file = sys.argv[1]
+print('\nARQUIVO: ', file)
 
-a = Maximaze(maxWeight=w, maxItems=pro, itemsWeights=weights, itemsValues=values)
-print(a.items)
-print(a.value)
+try:
+    f = open(file)
+    data = f.read().splitlines()
+
+except Exception as e:
+    print(e)
+
+w = int(data[0])
+weights = []
+values = []
+acuWeight = 0
+
+for d in data[1:]:
+    d = d.split(',')
+    weights.append(int(d[0]))
+    values.append(int(d[1]))
+
+totalData = len(weights)
+
+a = Maximaze(maxWeight=w, maxItems=totalData, itemsWeights=weights, itemsValues=values)
+
+for w in a.items:
+    acuWeight += w[1]
+
+print('\nÍTENS SELECIONADOS(valor/peso):\n', a.items)
+print('\nVALOR MÁXIMO:', a.value)
+print('\nPESO ACUMULADO: ', acuWeight, '\n')

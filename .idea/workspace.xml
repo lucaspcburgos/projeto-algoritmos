@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a2e2c7e-83f4-4c71-87b3-3b70317f8148" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/projeto-algoritmos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projeto-algoritmos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto-3/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-3/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-3/maximaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-3/maximaze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-3/solucao-teorica" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-3/solucao-teorica" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projeto-3/maximaze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+            <state relative-caret-position="141">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -27,8 +29,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projeto-3/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="544">
+              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projeto-3/cargas.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -36,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projeto-3/solucao-teorica">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="629">
+              <caret line="37" column="89" selection-start-line="37" selection-start-column="89" selection-end-line="37" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -77,10 +91,11 @@
         <option value="$PROJECT_DIR$/estruturas/documento.py" />
         <option value="$PROJECT_DIR$/estruturas/trie.py" />
         <option value="$PROJECT_DIR$/memory.txt" />
-        <option value="$PROJECT_DIR$/projeto-3/solucao-teorica" />
         <option value="$PROJECT_DIR$/projeto-3/matriz.py" />
         <option value="$PROJECT_DIR$/projeto-3/maximaze.py" />
+        <option value="$PROJECT_DIR$/projeto-3/cargas.txt" />
         <option value="$PROJECT_DIR$/projeto-3/main.py" />
+        <option value="$PROJECT_DIR$/projeto-3/solucao-teorica" />
       </list>
     </option>
   </component>
@@ -98,7 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,23 +123,13 @@
             <path>
               <item name="projeto-algoritmos" type="b2602c69:ProjectViewProjectNode" />
               <item name="projeto-algoritmos" type="462c0819:PsiDirectoryNode" />
-              <item name="projeto-2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projeto-algoritmos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-algoritmos" type="462c0819:PsiDirectoryNode" />
-              <item name="projeto-2" type="462c0819:PsiDirectoryNode" />
-              <item name="estruturas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projeto-algoritmos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-algoritmos" type="462c0819:PsiDirectoryNode" />
               <item name="projeto-3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.maximaze">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projeto-algoritmos" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,9 +168,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projeto-3" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projeto-3/main.py" />
@@ -271,8 +275,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.maximaze" />
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.maximaze" />
         <item itemvalue="Python.matriz" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.run" />
@@ -296,12 +300,12 @@
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15287296" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15287296" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3790497" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31425485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -438,13 +442,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projeto-3/matriz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="16" lean-forward="true" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto-3/matriz.py" />
     <entry file="file://$PROJECT_DIR$/projeto-2/estruturas/n_grama.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -452,24 +450,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projeto-3/cargas.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projeto-3/solucao-teorica">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="629">
+          <caret line="37" column="89" selection-start-line="37" selection-start-column="89" selection-end-line="37" selection-end-column="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto-3/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="544">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto-3/maximaze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+        <state relative-caret-position="141">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
         </state>
       </provider>
     </entry>

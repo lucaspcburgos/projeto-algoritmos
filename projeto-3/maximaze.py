@@ -39,7 +39,7 @@ class Maximaze():
                     value = max(self.matrix.find(item-1, w), self.matrix.find(item-1, w - itemsWeights[item-1] ) + itemsValues[item-1])
                     self.matrix.insertPosition(item, w, value)
 
-        print(self.matrix)
+        #print(self.matrix)
 
         self.__maxValue = self.matrix.find(maxItems, maxWeight)
 

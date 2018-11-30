@@ -13,7 +13,7 @@ Professor:
     Dada uma locomotiva com capacidade máxima de peso 'P'
 
     -Primeiro analizamos se uma carga faz parte ou não da solução ótima.
-        Caso ele faça parte da solução ótima, a comopsição ótima para a locomotiva seria o peso da locomotiva menos o peso da carga.
+        Caso ele faça parte da solução ótima, a composição ótima para a locomotiva seria o peso da locomotiva menos o peso da carga.
         Ou seja, é como se estivéssemos compondo uma outra locomotiva com peso ('P' - 'Xp') porém já com valor 'Xv' adicionado.
 
     -Depois analizamos se aquela carga NÃO faz parte da solução ótima.
@@ -35,7 +35,7 @@ Professor:
               da locomotiva P-Xp guardando o seu valor Xv.
               Ou seja, executamos f(n-1, P-Xp) + Xv
 
-            - Se o objeto X NÃO está na solução ótima, executamos a função para os elementos restantes, mantendo o peso da locomotiva
+            - Se o objeto X NÃO está na solução ótima, executamos a função para cada um dos elementos restantes, mantendo o peso da locomotiva
              f(n-1, P)
 
 
