@@ -55,8 +55,3 @@ class Maximaze():
     @property
     def value(self):
         return self.__maxValue
-
-
-
-if __name__ == '__main__':
-    a = Maximaze(maxWeight=5, maxItems=5, itemsWeights=[2, 5, 3, 1, 6], itemsValues=[10, 35, 23, 41, 9])
