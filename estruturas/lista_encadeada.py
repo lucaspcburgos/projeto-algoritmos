@@ -1,3 +1,10 @@
+"""
+Aluno: Lucas Prado da Costa Burgos
+lpcb@cin.ufpe.br
+Projeto 2 - Algoritmos e Estruturas de dados(IF969)
+28-10-2018
+"""
+
 class Node():
 
     """
@@ -10,7 +17,6 @@ class Node():
     def __init__(self, currentElement=None, nextElement=None):
         self.currentElement = currentElement
         self.nextElement = nextElement
-
 
 class ListaEncadeada():
 
@@ -65,7 +71,6 @@ class ListaEncadeada():
             listElement = self.firstElement.nextElement
             while listElement.nextElement:
                 if listElement.currentElement == element:
-                    print('aqui')
                     return True
 
                 else:
@@ -89,29 +94,3 @@ class ListaEncadeada():
             s += 1
             i = i.nextElement
         return s
-
-
-#==============================================TESTANDO LISTA ENCADEADA ================================================
-"""
-lista = ListaEncadeada()
-
-print(lista)
-
-dic = {
-    'chave': 125
-}
-
-print(type(dic))
-
-lista.insertLast(dic)
-lista.insertLast(34)
-lista.insertLast(4)
-lista.insertFirst(12)
-lista.insertLast(58)
-lista.insertLast(61)
-lista.insertLast(17)
-lista.insertFirst(110)
-
-if lista.search(4):
-    print(lista)
-"""

@@ -1,0 +1,43 @@
+54428996 function calls in 155.840 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1023    0.001    0.000    0.003    0.000 _bootlocale.py:23(getpreferredencoding)
+     1023    0.000    0.000    0.000    0.000 codecs.py:259(__init__)
+     1023    0.001    0.000    0.001    0.000 codecs.py:308(__init__)
+     1023    0.002    0.000    0.009    0.000 codecs.py:318(decode)
+        1    0.524    0.524   53.889   53.889 corpus.py:23(__init__)
+      100    0.006    0.000  101.947    1.019 corpus.py:56(verificarPlagio)
+     1023    0.050    0.000    1.387    0.001 documento.py:19(__init__)
+     1023    0.853    0.001    4.360    0.004 documento.py:29(gerarNgramas)
+      100    1.359    0.014   99.919    0.999 documento.py:47(contencao)
+   874589    0.345    0.000    0.345    0.000 lista_encadeada.py:17(__init__)
+     1023    0.002    0.000    0.003    0.000 lista_encadeada.py:30(__init__)
+   872543    0.178    0.000    0.178    0.000 lista_encadeada.py:45(isEmpty)
+   872543    2.713    0.000    3.236    0.000 lista_encadeada.py:49(insertLast)
+   468835   91.814    0.000   91.814    0.000 lista_encadeada.py:90(size)
+   631582    0.124    0.000    0.124    0.000 n_grama.py:14(documento)
+   872443    1.566    0.000    5.607    0.000 n_grama.py:35(__str__)
+  3489772    2.915    0.000    2.915    0.000 n_grama.py:36(<genexpr>)
+   872543    0.270    0.000    0.270    0.000 n_grama.py:9(__init__)
+  4999262   22.366    0.000   22.366    0.000 trie.py:11(__init__)
+        1    0.000    0.000    0.000    0.000 trie.py:17(__init__)
+ 14262868    6.167    0.000    8.008    0.000 trie.py:20(procurar)
+   631582   16.722    0.000   49.620    0.000 trie.py:30(inserir)
+   240861    3.429    0.000    6.746    0.000 trie.py:44(buscar)
+     1023    0.007    0.000    0.007    0.000 {built-in method _codecs.utf_8_decode}
+     1023    0.002    0.000    0.002    0.000 {built-in method _locale.nl_langinfo}
+     1023    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+ 23817818    1.841    0.000    1.841    0.000 {built-in method builtins.ord}
+     1024    0.021    0.000    0.021    0.000 {built-in method builtins.print}
+     1023    0.030    0.000    0.034    0.000 {built-in method io.open}
+     1023    0.165    0.000    0.165    0.000 {built-in method numpy.core.multiarray.array}
+        2    0.001    0.000    0.001    0.000 {built-in method posix.listdir}
+   632638    0.111    0.000    0.111    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+     1023    0.001    0.000    0.001    0.000 {method 'endswith' of 'str' objects}
+   872443    1.125    0.000    4.040    0.000 {method 'join' of 'str' objects}
+     1023    1.056    0.001    1.065    0.001 {method 'read' of '_io.TextIOWrapper' objects}
+     1023    0.070    0.000    0.070    0.000 {method 'split' of 'str' objects}
+      100    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}

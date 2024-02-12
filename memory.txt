@@ -1,0 +1,122 @@
+Line #    Mem usage    Increment   Line Contents
+================================================
+    19     28.7 MiB     28.7 MiB       @profile
+    20                                 def __init__(self,file,n):
+    21     28.7 MiB      0.0 MiB           self.file = file
+    22     28.7 MiB      0.0 MiB           self.wordsArray = np.array(open(file, 'r').read().split())
+    23     28.7 MiB      0.0 MiB           self.n = n
+    24     28.7 MiB      0.0 MiB           self.lista = ListaEncadeada()
+
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29     28.7 MiB     28.7 MiB       @profile
+    30                                 def gerarNgramas(self):
+    31                                     """
+    32                                     Esse metodo gera os n-gramas de tamanho self.n e armazena-os numa lista encadeada implementada no arquivo
+    33                                     lista_encadeada.py , que é a self.lista
+    34                                     """
+    35
+    36     28.7 MiB      0.0 MiB           n = self.n
+    37     28.7 MiB      0.0 MiB           limit = len(self.wordsArray)
+    38     29.0 MiB      0.0 MiB           for i in range(limit):
+    39     29.0 MiB      0.3 MiB               newNgrama = Ngrama(i, n-1, self)
+    40     29.0 MiB      0.0 MiB               self.lista.insertLast(newNgrama)
+    41     29.0 MiB      0.0 MiB               n += 1
+    42     29.0 MiB      0.0 MiB               if n > limit:
+    43     29.0 MiB      0.0 MiB                   break
+    44     29.0 MiB      0.0 MiB           return self.lista
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    30     29.0 MiB     29.0 MiB       @profile
+    31                                 def inserir(self, ngrama):
+    32     29.0 MiB      0.0 MiB           frase = str(ngrama)
+    33     29.0 MiB      0.0 MiB           local = self.root
+    34     29.0 MiB      0.0 MiB           for letra in frase:
+    35     29.0 MiB      0.0 MiB               pos = self.procurar(letra)
+    36     29.0 MiB      0.0 MiB               if local.filhos[pos] is None:
+    37     29.0 MiB      0.0 MiB                   local.filhos[pos] = Node(letra)
+    38     29.0 MiB      0.0 MiB               no = local.filhos[pos]
+    39     29.0 MiB      0.0 MiB               local = local.filhos[pos]
+    40     29.0 MiB      0.0 MiB           if no.valor is None:
+    41     29.0 MiB      0.0 MiB               no.valor = []
+    42     29.0 MiB      0.0 MiB           no.valor.append(ngrama.documento)
+
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    55     33.6 MiB     33.6 MiB       @profile
+    56                                 def verificarPlagio(self, file, limiar):
+    57
+    58                                     """
+    59                                     Esse metodo recebe o caminho de um arquivo (file) que vai ser analisado para definir se é plágio ou não.
+    60                                     Esse mesmo arquivo é passado como parametro para o metodo contençao() de cada elemento d em self.docs e como
+    61                                     o metodo retorna uma medida de contençao, ele é comparada com o limiar passado como parametro, e todos aqueles
+    62                                     documentos que possuirem uma medida maior ou igual ao limiar, são retornados em uma lista.
+    63
+    64                                     """
+    65     34.4 MiB      0.8 MiB           docSuspeito = Documento(file, self.__n)
+    66     35.7 MiB      1.3 MiB           docSuspeito.gerarNgramas()
+    67     35.9 MiB      0.3 MiB           dicResultado = docSuspeito.contencao(self.__arvoreTrie)
+    68     35.9 MiB      0.0 MiB           listaResultados = list(dicResultado.values())
+    69     35.9 MiB      0.0 MiB           listaFinal = []
+    70     35.9 MiB      0.0 MiB           for doc in listaResultados:
+    71     35.9 MiB      0.0 MiB               if doc[1] >= limiar:
+    72                                             listaFinal.append(doc)
+    73     35.9 MiB      0.0 MiB           return listaFinal
+
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    47     35.9 MiB     35.9 MiB       @profile
+    48                                 def contencao(self, trie):
+    49                                     """
+    50                                     :trie: arvore trie de n-gramas.
+    51
+    52                                     esse metodo recebe uma arvore Trie e procura os proprios N-gramas desse objeto da classe Documentona arvore,
+    53                                     retornando um dicionario com as chave sendo os nomes dos documentos e os valores sendo uma tupla com o numero
+    54                                     de ocorrencias e a contençao, nessa ordem.
+    55                                     """
+    56     35.9 MiB      0.0 MiB           ngramasIguais = {}
+    57     35.9 MiB      0.0 MiB           aux = self.lista.firstElement.nextElement
+    58     35.9 MiB      0.0 MiB           while aux.nextElement:
+    59     35.9 MiB      0.0 MiB               docList = trie.buscar(aux.currentElement)
+    60     35.9 MiB      0.0 MiB               if docList:
+    61     35.9 MiB      0.0 MiB                   for doc in docList:
+    62     35.9 MiB      0.0 MiB                       if doc.file not in ngramasIguais:
+    63     35.9 MiB      0.0 MiB                           ngramasIguais[doc.file] = [1, 0, doc.file]
+    64     35.9 MiB      0.0 MiB                           contencao = ngramasIguais[doc.file][0] / doc.lista.size()
+    65     35.9 MiB      0.0 MiB                           ngramasIguais[doc.file] = [1, contencao, doc.file]
+    66                                                 else:
+    67     35.9 MiB      0.0 MiB                           n = ngramasIguais[doc.file][0] + 1
+    68     35.9 MiB      0.0 MiB                           contencao = ngramasIguais[doc.file][0] / doc.lista.size()
+    69     35.9 MiB      0.0 MiB                           if contencao == 1:
+    70                                                         break
+    71     35.9 MiB      0.0 MiB                           ngramasIguais[doc.file] = [n, contencao, doc.file]
+    72     35.9 MiB      0.0 MiB               aux = aux.nextElement
+    73     35.9 MiB      0.0 MiB           return ngramasIguais
+
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    22     28.7 MiB     28.7 MiB       @profile
+    23                                 def __init__(self, path, n):
+    24     28.7 MiB      0.0 MiB           self.__n = n
+    25     28.7 MiB      0.0 MiB           self.__docs = []
+    26     28.7 MiB      0.0 MiB           self.__arvoreTrie = Trie()
+    27
+    28     28.7 MiB      0.0 MiB           filelist = os.listdir(path)
+    29     28.7 MiB      0.0 MiB           for i in filelist[0:1]:
+    30     28.7 MiB      0.0 MiB               if i.endswith(".txt"):
+    31     28.7 MiB      0.0 MiB                   docPath = str(path) + str(i)
+    32     28.7 MiB      0.0 MiB                   file = Documento(docPath, self.__n)
+    33     28.7 MiB      0.0 MiB                   self.__docs.append(file)
+    34     33.6 MiB      0.0 MiB           for doc in self.__docs:
+    35     29.0 MiB      0.3 MiB               listaEncadeadaDeNgramas = doc.gerarNgramas()
+    36     29.0 MiB      0.0 MiB               aux = listaEncadeadaDeNgramas.firstElement.nextElement
+    37     33.6 MiB      0.0 MiB               while aux.nextElement:
+    38     33.6 MiB      4.6 MiB                   self.__arvoreTrie.inserir(aux.currentElement)
+    39     33.6 MiB      0.0 MiB                   aux = aux.nextElement
+    40     33.6 MiB      0.0 MiB               self.__arvoreTrie.inserir(listaEncadeadaDeNgramas.lastElement.currentElement.currentElement)
+    41     33.6 MiB      0.0 MiB               print('inseriu: ', doc.file)
